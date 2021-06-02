@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+  pre_build:
+    commands:
+      - echo Installing node modules
+
+      # - echo parameter value is $REACT_URL
+      # - echo "parameter value is $REACT_URL"
+      - npm install
+  build:
+    commands:
+      - echo Running tests
+      - npm run test
