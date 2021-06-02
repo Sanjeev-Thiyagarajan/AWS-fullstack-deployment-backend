@@ -1,5 +1,5 @@
 module.exports = square = (number) => {
-  return number * number + 1;
+  return number * number;
 };
 
 console.log(square(4));
