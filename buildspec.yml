@@ -8,7 +8,6 @@ phases:
   install:
     runtime-versions:
       nodejs: 14
-      docker: 18
   pre_build:
     commands:
       - echo login to dockerhub
