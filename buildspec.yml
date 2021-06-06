@@ -1,5 +1,7 @@
 version: 0.2
 env:
+  variables:
+    REPOSITORY_URI: "sloppynetworks/aws-fullstack-backend"
   secrets-manager:
     DOCKERHUB_PASSWORD: "yelp-dockerhub:password"
 phases:
@@ -19,3 +21,10 @@ phases:
     commands:
       - echo Running tests
       - npm run test
+
+      - echo build and push docker image
+      - docker build -t $REPOSITORY_URI .
+      - docker push $REPOSITORY_URI
+
+  post_build:
+    commands:
