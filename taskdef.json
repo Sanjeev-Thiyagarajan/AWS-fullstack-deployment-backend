@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "Express",
-      "image": "<IMAGE1_NAME>",
+      "image": "<IMAGE>",
       "essential": true,
       "portMappings": [
         {
