@@ -26,9 +26,10 @@ phases:
       - docker build -t $REPOSITORY_URI .
       - docker push $REPOSITORY_URI
       - printf '[{"name":"Express", "ImageURI":%s}]' $REPOSITORY_URI > imagedefinitions.json
+      - printf '{"ImageURI":"%s"}' $REPOSITORY_URI > imageDetail.json
 
   post_build:
     commands:
 artifacts:
   files:
-    - imagedefinitions.json
+    - imageDetail.json
