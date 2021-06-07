@@ -5,8 +5,9 @@ resources:
       Properties:
         # TaskDefinition: "arn:aws:ecs:us-east-2:040497317401:task-definition/Node-backend:9"
         TaskDefinition: <TASK_DEFINITION>
-        ContainerName: "Express"
-        ContainerPort: 80
+        LoadBalancerInfo:
+          ContainerName: "Express"
+          ContainerPort: 80
 Hooks:
   - BeforeInstall: "LambdaFunctionToValidateBeforeInstall"
   - AfterInstall: "LambdaFunctionToValidateAfterInstall"

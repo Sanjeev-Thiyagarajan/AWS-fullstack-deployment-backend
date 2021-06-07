@@ -20,7 +20,7 @@ phases:
   build:
     commands:
       - echo Running tests
-      - npm run test
+      # - npm run test
 
       - echo build and push docker image
       - docker build -t $REPOSITORY_URI .
