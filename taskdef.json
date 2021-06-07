@@ -18,5 +18,6 @@
   "networkMode": "awsvpc",
   "cpu": "256",
   "memory": "512",
-  "family": "ecs-demo"
+
+  "family": "Node-backend"
 }
