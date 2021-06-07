@@ -6,7 +6,7 @@ resources:
         # TaskDefinition: "arn:aws:ecs:us-east-2:040497317401:task-definition/Node-backend:9"
         TaskDefinition: <TASK_DEFINITION>
         LoadBalancerInfo:
-          ContainerName: "main-cluster"
+          ContainerName: "Express"
           ContainerPort: 80
 # Hooks:
 #   - BeforeInstall: "LambdaFunctionToValidateBeforeInstall"
