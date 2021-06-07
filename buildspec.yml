@@ -30,4 +30,5 @@ phases:
   post_build:
     commands:
 artifacts:
-  files: imagedefinitions.json
+  files:
+    - imagedefinitions.json
