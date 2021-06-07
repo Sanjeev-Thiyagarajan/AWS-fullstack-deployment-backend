@@ -1,5 +1,6 @@
 {
   "executionRoleArn": "arn:aws:iam::040497317401:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::040497317401:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "Express",
