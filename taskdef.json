@@ -13,6 +13,16 @@
           "containerPort": 3001
         }
       ],
+      "logConfiguration": {
+          "logDriver": "awslogs",
+          "secretOptions": null,
+          "options": {
+              "awslogs-group": "/ecs/Node-backend",
+              "awslogs-region": "us-east-2",
+              "awslogs-stream-prefix": "ecs"
+          }
+      },
+      
       "environment": [
         {
           "name": "NODE_ENV",
@@ -36,7 +46,7 @@
         },
         {
           "name": "PGPASSWORD",
-          "value": "arn:aws:secretsmanager:us-east-2:040497317401:secret:PGPASSWORD-ggxJ2W:PGPASSWORD::"
+          "valueFrom": "arn:aws:secretsmanager:us-east-2:040497317401:secret:PGPASSWORD-ggxJ2W:PGPASSWORD::"
         }
       ]
     }
