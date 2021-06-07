@@ -1,0 +1,22 @@
+{
+  "executionRoleArn": "arn:aws:iam::account_ID:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "Express",
+      "image": "<IMAGE1_NAME>",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 3001,
+          "protocol": "tcp",
+          "containerPort": 3001
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "networkMode": "awsvpc",
+  "cpu": "256",
+  "memory": "512",
+  "family": "ecs-demo"
+}
