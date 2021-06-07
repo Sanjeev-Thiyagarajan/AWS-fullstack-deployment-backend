@@ -16,7 +16,7 @@ app.get("/api/v1/test", (req, res) => {
   });
 });
 
-// Get all Restaurantsfssdf
+// Get all Restaurantsfssdfdf
 app.get("/api/v1/restaurants", async (req, res) => {
   try {
     //const results = await db.query("select * from restaurants");
