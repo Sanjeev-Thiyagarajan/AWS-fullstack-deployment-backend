@@ -11,6 +11,32 @@
           "protocol": "tcp",
           "containerPort": 3001
         }
+      ],
+      "environment": [
+        {
+          "name": "NODE_ENV",
+          "value": "production"
+        },
+        {
+          "name": "PGDATABASE",
+          "value": "yelp"
+        },
+        {
+          "name": "PGHOST",
+          "value": "yelp2-databased.cdqkdxlighii.us-east-2.rds.amazonaws.com"
+        },
+        {
+          "name": "PGPORT",
+          "value": "5432"
+        },
+        {
+          "name": "PGUSER",
+          "value": "postgres"
+        },
+        {
+          "name": "PGPASSWORD",
+          "value": "arn:aws:secretsmanager:us-east-2:040497317401:secret:PGPASSWORD-ggxJ2W:PGPASSWORD::"
+        }
       ]
     }
   ],
