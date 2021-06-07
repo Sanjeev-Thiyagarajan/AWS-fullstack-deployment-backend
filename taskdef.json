@@ -43,13 +43,16 @@
         {
           "name": "PGUSER",
           "value": "postgres"
-        },
-        {
-          "name": "PGPASSWORD",
-          "valueFrom": "arn:aws:secretsmanager:us-east-2:040497317401:secret:PGPASSWORD-ggxJ2W:PGPASSWORD::"
         }
+
       ]
     }
+  ],
+  "secrets": [
+      {
+          "valueFrom": "arn:aws:secretsmanager:us-east-2:040497317401:secret:PGPASSWORD-ggxJ2W:PGPASSWORD::",
+          "name": "PGPASSWORD"
+      }
   ],
   "requiresCompatibilities": ["FARGATE"],
   "networkMode": "awsvpc",
